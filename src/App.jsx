@@ -1,5 +1,18 @@
+import Home from "./Pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Movie from "./Pages/Movie";
+import Header from "./Components/Header";
 function App() {
-  return <>movie_app</>;
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="movie" element={<Movie />} />
+        <Route path="/" element={<h1>Error Page</h1>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
