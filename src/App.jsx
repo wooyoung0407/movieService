@@ -14,7 +14,6 @@ function App() {
         <Route index element={<Home />} />
         <Route path="movies/:type" element={<MovieList />} />
         <Route path="movie/:id" element={<MovieDetail />} />
-        <Route path="movie" element={<Movie />} />
         <Route path="/" element={<h1>Error Page</h1>} />
       </Routes>
     </BrowserRouter>

@@ -1,7 +1,16 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 function PosterItem({ movie }) {
+
+
+  const navigate = useNavigate();
+
+  const onClickPoster = () => {
+      navigate("/movie/" + movie.id)
+  }
+
   return (
-    <Container>
+    <Container onClick={onClickPoster}>
       <ImgBox>
         <img
           src={"https://image.tmdb.org/t/p/original" + movie.backdrop_path}
